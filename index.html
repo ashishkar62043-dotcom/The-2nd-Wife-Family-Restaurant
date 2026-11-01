@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 2nd Wife Family Restaurant | Sherghati - Digital Menu & Orders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .badge-glow { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+    .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-nav { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes pulse-slow { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.03); } }
+    .pulse-btn { animation: pulse-slow 2.5s infinite; }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen pb-28 selection:bg-amber-500 selection:text-black">
+
+  <!-- TOP DEVELOPER PERSUASION BAR -->
+  <aside aria-label="Developer Notice" class="bg-gradient-to-r from-amber-600 via-emerald-600 to-teal-600 text-white text-xs py-2 px-3 sm:px-4 shadow-lg sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 truncate">
+        <span class="bg-black/40 text-amber-300 font-extrabold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase border border-amber-400/30">Live Prototype</span>
+        <span class="truncate font-medium text-[11px] sm:text-xs">Exclusively Crafted for <b>The 2nd Wife Family Restaurant</b></span>
+      </div>
+      <div class="flex items-center space-x-2 flex-shrink-0">
+        <span class="hidden md:inline text-[11px] text-emerald-100">Ready to launch? Contact: <b>Ashish Sharma</b></span>
+        <a href="https://wa.me/918292794750?text=Namaste%20Ashish%20ji,%20The%202nd%20Wife%20ke%20liye%20website%20banwani%20hai" class="bg-white text-gray-950 hover:bg-amber-100 font-bold px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1.5 shadow transition">
+          <i class="fa-brands fa-whatsapp text-emerald-600 font-bold"></i> 8292794750
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION -->
+  <header class="glass-nav border-b border-slate-800/80 sticky top-[33px] sm:top-[35px] z-40 transition">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-md">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div>
+          <h1 class="font-serif-title text-base sm:text-lg font-bold tracking-tight text-white leading-tight">The 2nd Wife</h1>
+          <p class="text-[11px] text-amber-400 font-medium tracking-wide flex items-center gap-1">
+            <i class="fa-solid fa-location-dot text-[10px]"></i> Nai Bazar, Sherghati
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="openBookingModal()" class="hidden sm:flex items-center gap-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-lg transition font-medium">
+          <i class="fa-regular fa-calendar-check text-amber-400"></i> Reserve Table
+        </button>
+        <a href="tel:09097160969" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-phone"></i> Call Shop
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-[#121927] to-[#0b0f19] border-b border-slate-800/60 px-4 pt-8 pb-10">
+    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-3">
+        <i class="fa-solid fa-fire text-amber-400"></i> Sherghati's Premium Multi-Cuisine Destination
+      </span>
+      <h2 class="font-serif-title text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+        Laziz Biryani, Tandoori & <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">Champaran Meat Delights</span>
+      </h2>
+      <p class="text-slate-300 text-xs sm:text-sm mt-3 max-w-xl mx-auto leading-relaxed">
+        Ghar baithe bina Swiggy/Zomato commission ke direct fresh aur garam parcel mangwaiye, ya restaurant me bina intezar kiye dining table pehle se reserve karein.
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-lg mx-auto mt-6 text-center">
+        <div class="glass-card p-2 sm:p-3 rounded-xl">
+          <div class="text-amber-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-solid fa-star text-xs"></i> 4.5+</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Customer Rating</div>
+        </div>
+        <div class="glass-card p-2 sm:p-3 rounded-xl">
+          <div class="text-emerald-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp text-xs"></i> 0% Cut</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Direct WhatsApp</div>
+        </div>
+        <div class="glass-card p-2 sm:p-3 rounded-xl">
+          <div class="text-blue-400 font-bold text-sm sm:text-base flex items-center justify-center gap-1"><i class="fa-solid fa-bowl-food text-xs"></i> 100%</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Fresh Ingredients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER TOOLBAR -->
+  <section class="sticky top-[86px] sm:top-[90px] z-30 glass-nav border-b border-slate-800/80 py-3 shadow-md">
+    <div class="max-w-5xl mx-auto px-4 space-y-2.5">
+      <!-- Search Input & Veg Filter -->
+      <div class="flex items-center gap-2">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="search-input" oninput="handleSearch()" placeholder="Dishes search karein (e.g. Biryani, Paneer, Handi)..." class="w-full pl-8 pr-3 py-1.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="flex items-center bg-slate-900 border border-slate-700 rounded-xl p-1 text-[11px]">
+          <button id="veg-all" onclick="setDietFilter('all')" class="px-2 py-0.5 rounded-lg font-bold bg-amber-500 text-slate-950">All</button>
+          <button id="veg-only" onclick="setDietFilter('veg')" class="px-2 py-0.5 rounded-lg text-emerald-400 font-medium hover:text-white">Veg</button>
+          <button id="nonveg-only" onclick="setDietFilter('nonveg')" class="px-2 py-0.5 rounded-lg text-red-400 font-medium hover:text-white">Non-Veg</button>
+        </div>
+      </div>
+
+      <!-- Categories Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto scrollbar-hide text-xs pt-1">
+        <button onclick="filterCategory('all', this)" class="cat-pill active-cat px-3.5 py-1.5 rounded-xl font-bold bg-amber-500 text-slate-950 whitespace-nowrap transition">All Dishes</button>
+        <button onclick="filterCategory('biryani', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Dum Biryani</button>
+        <button onclick="filterCategory('champaran', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Champaran Handi</button>
+        <button onclick="filterCategory('main', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Curries & Gravy</button>
+        <button onclick="filterCategory('tandoor', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Tandoor & Starters</button>
+        <button onclick="filterCategory('breads', this)" class="cat-pill px-3.5 py-1.5 rounded-xl font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Roti & Naan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISHES MENU GRID -->
+  <main class="max-w-5xl mx-auto px-4 mt-6">
+    <div id="empty-state" class="hidden text-center py-12 glass-card rounded-2xl">
+      <i class="fa-solid fa-bowl-rice text-slate-500 text-4xl mb-3"></i>
+      <h3 class="text-sm font-bold text-slate-300">Koi dish match nahi hui</h3>
+      <p class="text-xs text-slate-500 mt-1">Kuch doosra naam search karke dekhein.</p>
+    </div>
+
+    <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Dishes Rendered via JS -->
+    </div>
+  </main>
+
+  <!-- PITCH & PORTFOLIO CTA SECTION (Ashish Sharma) -->
+  <section class="max-w-5xl mx-auto px-4 mt-12">
+    <div class="relative overflow-hidden rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-slate-850 to-emerald-950/60 border border-emerald-500/30 shadow-2xl">
+      <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+        <div class="max-w-xl">
+          <span class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider mb-2">
+            Professional Web Solution
+          </span>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-serif-title">
+            Apne Restaurant Ko Online Bhejein Bina Commission Ke
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+            Zomato aur Swiggy har order par 25 se 30 percent commission katte hain. Hum Sherghati ke dukanon aur restaurants ke liye aisi hi fast aur modern direct WhatsApp order website banate hain.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mt-4 text-xs text-slate-300 font-medium">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-emerald-400"></i> Free Domain & Hosting Setup</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-emerald-400"></i> Pura Menu Card Upload</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-emerald-400"></i> 24 Ghante Me Ready</span>
+          </div>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-emerald-500/30 flex flex-col items-center text-center w-full md:w-auto min-w-[240px]">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-xl font-bold mb-2">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Web Developer</span>
+          <h4 class="text-base font-extrabold text-white mt-0.5">Ashish Sharma</h4>
+          <span class="text-xs text-amber-400 font-bold mb-3">📞 8292794750</span>
+          
+          <a href="https://wa.me/918292794750?text=Namaste%20Ashish%20ji,%20maine%20The%202nd%20Wife%20wala%20demo%20dekha.%20Mujhe%20apne%20restaurant/shop%20ke%20liye%20bhi%20website%20banwani%20hai." target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2 px-4 rounded-lg text-xs flex items-center justify-center gap-2 transition shadow-md">
+            <i class="fa-brands fa-whatsapp text-sm font-bold"></i> Abhi Baat Karein
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CART BAR -->
+  <aside aria-label="Shopping Cart Drawer" id="cart-drawer" class="fixed bottom-0 left-0 right-0 glass-nav border-t border-slate-700/80 p-3 sm:p-4 z-40 transition-all duration-300 transform translate-y-full">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-lg shadow-lg relative">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="badge-count" class="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-950">0</span>
+        </div>
+        <div>
+          <div class="text-[11px] text-slate-400 uppercase font-semibold">Estimated Parcel Total</div>
+          <div class="text-base sm:text-lg font-extrabold text-amber-400">₹<span id="total-price">0</span></div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="clearCart()" class="text-slate-400 hover:text-red-400 text-xs px-2.5 py-2 transition" title="Clear Basket">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+        <button onclick="sendOrderWhatsApp()" class="pulse-btn bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-xl transition">
+          <i class="fa-brands fa-whatsapp text-base"></i> Send Order on WhatsApp
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- TABLE BOOKING MODAL -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full p-6 rounded-2xl relative border-amber-500/40">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-sm">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="flex items-center gap-2 text-amber-400 text-sm font-bold mb-1">
+        <i class="fa-solid fa-chair"></i> The 2nd Wife Dining
+      </div>
+      <h3 class="text-xl font-bold text-white font-serif-title">Family Table Reservation</h3>
+      <p class="text-slate-400 text-xs mt-1">Apna time aur members select karein, booking direct restaurant WhatsApp par confirm hogi.</p>
+
+      <form onsubmit="handleBookingSubmit(event)" class="mt-4 space-y-3">
+        <div>
+          <label class="block text-[11px] text-slate-300 font-semibold mb-1">Aapka Naam</label>
+          <input type="text" id="book-name" required placeholder="e.g. Rahul Kumar" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[11px] text-slate-300 font-semibold mb-1">Guests / Log</label>
+            <select id="book-guests" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500">
+              <option value="2 Log">2 Guests (Couple)</option>
+              <option value="4 Log">4 Guests (Family)</option>
+              <option value="6 Log">6 Guests</option>
+              <option value="8+ Log">8+ Guests (Party)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] text-slate-300 font-semibold mb-1">Timing</label>
+            <input type="time" id="book-time" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-[11px] text-slate-300 font-semibold mb-1">Special Request (Optional)</label>
+          <input type="text" id="book-notes" placeholder="e.g. Birthday decoration / AC Cabin" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500">
+        </div>
+        <button type="submit" class="w-full mt-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition">
+          <i class="fa-brands fa-whatsapp font-bold text-sm"></i> Confirm via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // VERIFIED MENU ITEMS FOR THE 2ND WIFE RESTAURANT
+    const dishes = [
+      {
+        id: "d1",
+        title: "Special Chicken Dum Biryani",
+        category: "biryani",
+        diet: "nonveg",
+        price: 220,
+        badge: "Chef Special",
+        desc: "Zafrani basmati chawal slow-cooked desi spices aur juicy chicken pieces ke sath. Complimentary cold raita aur salan.",
+        img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d2",
+        title: "Hyderabadi Mutton Dum Biryani",
+        category: "biryani",
+        diet: "nonveg",
+        price: 320,
+        badge: "Bestseller",
+        desc: "Rich dum cooked lamb shanks aromatic rice ke sath, ghee aur roasted dry fruits ki khushboo.",
+        img: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d3",
+        title: "Champaran Handi Meat (Ahuna)",
+        category: "champaran",
+        diet: "nonveg",
+        price: 360,
+        badge: "Authentic Earthen Pot",
+        desc: "Mitti ki handi me sarson tel aur khada lasun ke sath dheemi aanch par pakaya gaya tender mutton.",
+        img: "https://images.unsplash.com/photo-1545247181-516773ca83f3?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d4",
+        title: "Champaran Handi Chicken",
+        category: "champaran",
+        diet: "nonveg",
+        price: 260,
+        badge: "Smoky Flavor",
+        desc: "Koyla smoke aur earthen clay pot me taiyar special chicken curry. Local Bihari flavor.",
+        img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d5",
+        title: "Paneer Butter Masala",
+        category: "main",
+        diet: "veg",
+        price: 190,
+        badge: "Pure Veg Hit",
+        desc: "Makkhan aur kaju-tamatar ki creamy rich gravy me naram malai paneer ke cubes.",
+        img: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d6",
+        title: "Kadhai Paneer Lazeez",
+        category: "main",
+        diet: "veg",
+        price: 180,
+        badge: "Spicy",
+        desc: "Shikanji masala, capsicum aur pyaz ke crunchy cubes ke sath bhuna hua paneer.",
+        img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d7",
+        title: "Chicken Tikka Tandoori (6 Pcs)",
+        category: "tandoor",
+        diet: "nonveg",
+        price: 230,
+        badge: "Charcoal Grilled",
+        desc: "Dahi aur tandoori masale me marinate kiya gaya juicy boneless chicken tikka pudina chutney ke sath.",
+        img: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d8",
+        title: "Crispy Chilli Paneer Dry",
+        category: "tandoor",
+        diet: "veg",
+        price: 170,
+        badge: "Quick Starter",
+        desc: "Crispy fried cottage cheese wok-tossed in dark soya, capsicum aur green chilli sauce.",
+        img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d9",
+        title: "Butter Garlic Naan",
+        category: "breads",
+        diet: "veg",
+        price: 45,
+        badge: "Clay Oven",
+        desc: "Fresh mitti ke tandoor se nikli crushed garlic aur pure amul butter wali crisp naan.",
+        img: "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: "d10",
+        title: "Tandoori Roti with Butter",
+        category: "breads",
+        diet: "veg",
+        price: 15,
+        badge: "Whole Wheat",
+        desc: "100% shuddh gehu ka atta tandoor baked aur butter coated.",
+        img: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=600&auto=format&fit=crop&q=80"
+      }
+    ];
+
+    let cart = {};
+    let activeCategory = 'all';
+    let activeDiet = 'all';
+    let searchQuery = '';
+
+    function renderDishes() {
+      const container = document.getElementById('menu-grid');
+      const emptyState = document.getElementById('empty-state');
+
+      const filtered = dishes.filter(item => {
+        const matchCategory = activeCategory === 'all' || item.category === activeCategory;
+        const matchDiet = activeDiet === 'all' || item.diet === activeDiet;
+        const matchSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCategory && matchDiet && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      container.innerHTML = filtered.map(dish => {
+        const qty = cart[dish.id] || 0;
+        return `
+          <div class="glass-card rounded-2xl overflow-hidden hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
+            <div class="relative h-44 sm:h-48 overflow-hidden bg-slate-950">
+              <img src="${dish.img}" alt="${dish.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80'">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              
+              <!-- Badges -->
+              <div class="absolute top-3 left-3 flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-md ${dish.diet === 'veg' ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white'}">
+                  <span class="w-1.5 h-1.5 rounded-full ${dish.diet === 'veg' ? 'bg-emerald-200' : 'bg-red-200'}"></span>
+                  ${dish.diet === 'veg' ? 'VEG' : 'NON-VEG'}
+                </span>
+                ${dish.badge ? `<span class="bg-black/70 backdrop-blur-sm text-amber-400 border border-amber-500/30 text-[10px] font-semibold px-2 py-0.5 rounded-md">${dish.badge}</span>` : ''}
+              </div>
+
+              <!-- Price Tag on Image -->
+              <div class="absolute bottom-3 right-3 bg-amber-500 text-slate-950 font-black text-sm px-2.5 py-1 rounded-lg shadow-lg">
+                ₹${dish.price}
+              </div>
+            </div>
+
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-white text-base leading-snug group-hover:text-amber-400 transition-colors">${dish.title}</h4>
+                <p class="text-slate-400 text-xs mt-1.5 line-clamp-2 leading-relaxed">${dish.desc}</p>
+              </div>
+
+              <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-800/80">
+                <span class="text-xs text-slate-400 font-medium">Portion: Standard</span>
+                
+                ${qty > 0 ? `
+                  <div class="flex items-center bg-slate-900 border border-amber-500/50 rounded-xl overflow-hidden shadow">
+                    <button onclick="changeQty('${dish.id}', -1)" class="w-8 h-8 flex items-center justify-center bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 font-bold transition">-</button>
+                    <span class="w-8 text-center text-xs font-black text-white">${qty}</span>
+                    <button onclick="changeQty('${dish.id}', 1)" class="w-8 h-8 flex items-center justify-center bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 font-bold transition">+</button>
+                  </div>
+                ` : `
+                  <button onclick="changeQty('${dish.id}', 1)" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow transition">
+                    <i class="fa-solid fa-plus text-[10px]"></i> Add
+                  </button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        p.classList.remove('active-cat', 'bg-amber-500', 'text-slate-950');
+        p.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      btn.classList.remove('bg-slate-800', 'text-slate-300');
+      btn.classList.add('active-cat', 'bg-amber-500', 'text-slate-950');
+      renderDishes();
+    }
+
+    function setDietFilter(diet) {
+      activeDiet = diet;
+      ['veg-all', 'veg-only', 'nonveg-only'].forEach(id => {
+        const btn = document.getElementById(id);
+        btn.classList.remove('bg-amber-500', 'text-slate-950', 'bg-emerald-600', 'bg-red-600', 'text-white');
+      });
+
+      if (diet === 'all') {
+        document.getElementById('veg-all').classList.add('bg-amber-500', 'text-slate-950');
+      } else if (diet === 'veg') {
+        document.getElementById('veg-only').classList.add('bg-emerald-600', 'text-white');
+      } else {
+        document.getElementById('nonveg-only').classList.add('bg-red-600', 'text-white');
+      }
+      renderDishes();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('search-input').value;
+      renderDishes();
+    }
+
+    function changeQty(id, delta) {
+      if (!cart[id]) cart[id] = 0;
+      cart[id] += delta;
+      if (cart[id] <= 0) delete cart[id];
+      renderDishes();
+      updateDrawer();
+    }
+
+    function clearCart() {
+      cart = {};
+      renderDishes();
+      updateDrawer();
+    }
+
+    function updateDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const badge = document.getElementById('badge-count');
+      const totalSpan = document.getElementById('total-price');
+
+      let count = 0;
+      let total = 0;
+
+      for (let id in cart) {
+        const dish = dishes.find(d => d.id === id);
+        count += cart[id];
+        total += dish.price * cart[id];
+      }
+
+      badge.innerText = count;
+      totalSpan.innerText = total;
+
+      if (count > 0) {
+        drawer.classList.remove('translate-y-full');
+      } else {
+        drawer.classList.add('translate-y-full');
+      }
+    }
+
+    function sendOrderWhatsApp() {
+      let orderText = "*NEW ORDER - THE 2ND WIFE RESTAURANT*%0A";
+      orderText += "-----------------------------%0A";
+      let total = 0;
+
+      for (let id in cart) {
+        const dish = dishes.find(d => d.id === id);
+        const itemTotal = dish.price * cart[id];
+        total += itemTotal;
+        orderText += `• ${dish.title} x ${cart[id]} = ₹${itemTotal}%0A`;
+      }
+
+      orderText += "-----------------------------%0A";
+      orderText += `*Total Amount:* ₹${total}%0A`;
+      orderText += "*Delivery/Parcel Type:* Takeaway / Parcel%0A";
+      orderText += "%0AKripya order confirm karein aur parcel taiyari ka time batayein.";
+
+      // Target Shop: The 2nd Wife Restaurant (+91 90971 60969)
+      window.open(`https://wa.me/919097160969?text=${orderText}`, '_blank');
+    }
+
+    // Modal Control
+    function openBookingModal() {
+      document.getElementById('booking-modal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('book-name').value;
+      const guests = document.getElementById('book-guests').value;
+      const time = document.getElementById('book-time').value;
+      const notes = document.getElementById('book-notes').value || "None";
+
+      let text = `*TABLE BOOKING REQUEST - THE 2ND WIFE*%0A`;
+      text += `• Name: ${name}%0A`;
+      text += `• Guests: ${guests}%0A`;
+      text += `• Preferred Time: ${time}%0A`;
+      text += `• Note: ${notes}%0A%0A`;
+      text += `Kripya table availability confirm karein.`;
+
+      window.open(`https://wa.me/919097160969?text=${text}`, '_blank');
+      closeBookingModal();
+    }
+
+    // Initial render
+    renderDishes();
+  </script>
+</body>
+</html>
